@@ -1,0 +1,760 @@
+Unity Editor version:    2022.3.33f1 (b2c853adf198)
+Branch:                  2022.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.3 (Build 23D56)
+Darwin version:          23.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+/Users/yililalo/Documents/2024论文项目组/craft-your-own-ruysch-unity
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+65109
+Successfully changed project path to: /Users/yililalo/Documents/2024论文项目组/craft-your-own-ruysch-unity
+/Users/yililalo/Documents/2024论文项目组/craft-your-own-ruysch-unity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [7922965568] Host "[IP] 192.168.1.33 [Port] 0 [Flags] 2 [Guid] 1906874505 [EditorId] 1906874505 [Version] 1048832 [Id] OSXEditor(0,StainlessEar.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [7922965568] Host "[IP] 192.168.1.33 [Port] 0 [Flags] 2 [Guid] 1906874505 [EditorId] 1906874505 [Version] 1048832 [Id] OSXEditor(0,StainlessEar.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+Refreshing native plugins compatible for Editor in 17.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.33f1 (b2c853adf198)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/yililalo/Documents/2024论文项目组/craft-your-own-ruysch-unity/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M2 (high power)
+Metal devices available: 1
+0: Apple M2 (high power)
+Using device Apple M2 (high power)
+Initializing Metal device caps: Apple M2
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56001
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.33f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.002866 seconds.
+- Loaded All Assemblies, in  0.315 seconds
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.153 seconds
+Domain Reload Profiling: 467ms
+	BeginReloadAssembly (148ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (103ms)
+		LoadAssemblies (148ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (101ms)
+			TypeCache.Refresh (100ms)
+				TypeCache.ScanAssembly (90ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (153ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (119ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (83ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.498 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.417 seconds
+Domain Reload Profiling: 917ms
+	BeginReloadAssembly (77ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (17ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (371ms)
+		LoadAssemblies (260ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (145ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (105ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (417ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (328ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (41ms)
+			ProcessInitializeOnLoadAttributes (270ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.24 seconds
+Refreshing native plugins compatible for Editor in 1.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3113 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (52.0 KB). Loaded Objects now: 3573.
+Memory consumption went from 132.0 MB to 131.9 MB.
+Total: 3.673417 ms (FindLiveObjects: 0.147917 ms CreateObjectMapping: 0.060416 ms MarkObjects: 3.358292 ms  DeleteObjects: 0.105167 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 783190.072030 seconds.
+  path: Assets/Ruysch_Cherbourg.jpg
+  artifactKey: Guid(6ac2016587fc741fbbc833c35585632e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Cherbourg.jpg using Guid(6ac2016587fc741fbbc833c35585632e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '57b2de7403ee39c950b007d73c6bcb15') in 0.086615 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Ruysch_NYC_Czernin.jpg
+  artifactKey: Guid(0c4f66677cdc5466ea3d0c12f12454df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_NYC_Czernin.jpg using Guid(0c4f66677cdc5466ea3d0c12f12454df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '0a8de91050de657bfd4090fbb541b6b0') in 0.013010 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Ruysch_Dresden.jpg
+  artifactKey: Guid(c513129aa6e4c45d0b6ca8e823646566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Dresden.jpg using Guid(c513129aa6e4c45d0b6ca8e823646566) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'b503ef62e5ae7088f079d5a51e623e9f') in 0.022743 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Ruysch_Florenz_Uffizi_02.jpg
+  artifactKey: Guid(6bc8e667fc474442791bb01ee914dd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Florenz_Uffizi_02.jpg using Guid(6bc8e667fc474442791bb01ee914dd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '14c43cf1765f8e1b6e3b3ba3e5c5eee7') in 0.024941 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000377 seconds.
+  path: Assets/Ruysch_Florenz_Uffizi_01.jpg
+  artifactKey: Guid(3932cb142e1a2407d8876d4929532b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Florenz_Uffizi_01.jpg using Guid(3932cb142e1a2407d8876d4929532b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3d4002c3bed015afd29533f8ab379485') in 0.010288 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Ruysch_St. Gallen.jpg
+  artifactKey: Guid(25afc250a454247d9b565bb0d168525f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_St. Gallen.jpg using Guid(25afc250a454247d9b565bb0d168525f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '02c3e99a5a6b437012d5ef4215927eb8') in 0.018328 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Ruysch_Hamburg.jpg
+  artifactKey: Guid(95bc4268b39dc45348f2da26486a9319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Hamburg.jpg using Guid(95bc4268b39dc45348f2da26486a9319) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '850a4b90b54f6d0ac94f64e2c8dd6281') in 0.017545 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/Ruysch_Kassel.jpg
+  artifactKey: Guid(1bd2bf6bf4ba745c185377cbfc725dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Kassel.jpg using Guid(1bd2bf6bf4ba745c185377cbfc725dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'ba4accf49d54a615391d8181f6181cf7') in 0.008278 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Ruysch_Rostock.jpg
+  artifactKey: Guid(87dfaa7caf41846fa8e9121fc986f3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Rostock.jpg using Guid(87dfaa7caf41846fa8e9121fc986f3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'fd690784e95242eaf8ca5a53a0baf98a') in 0.026082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Ruysch_KansasCity.jpg
+  artifactKey: Guid(dd1aab5241ab745c1abdddbb31ada00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_KansasCity.jpg using Guid(dd1aab5241ab745c1abdddbb31ada00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '97b415f12056a6f69db79cf3b39507b6') in 0.016843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Ruysch_Brasschaat.JPG
+  artifactKey: Guid(b0f03314865f745f2ba8d0d67e1c2170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Brasschaat.JPG using Guid(b0f03314865f745f2ba8d0d67e1c2170) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '8120e420be79f2e63acfc246e78a9a52') in 0.009884 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/Ruysch_Cologny.jpg
+  artifactKey: Guid(8f4a7fd2ed4a24972bcc89d13750ea15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Cologny.jpg using Guid(8f4a7fd2ed4a24972bcc89d13750ea15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '163e4b1ee875d501456ee547eb0d84f9') in 0.023873 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Ruysch_Florenz_Pitti_01.jpg
+  artifactKey: Guid(51c096cdc9b814d1d83ac81cc7cc5a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Florenz_Pitti_01.jpg using Guid(51c096cdc9b814d1d83ac81cc7cc5a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e044e43ed890be7d5536aeafcf86b21e') in 0.017782 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Ruysch_Prag_NG_01.jpg
+  artifactKey: Guid(b7e043d43404d41f48887a79bea1b74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Prag_NG_01.jpg using Guid(b7e043d43404d41f48887a79bea1b74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '877a04670067adace20d9d9ffc2a7dcc') in 0.020718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Ruysch_Karlsruhe_02.jpg
+  artifactKey: Guid(50384ab41def8436385bd12ba8004672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Karlsruhe_02.jpg using Guid(50384ab41def8436385bd12ba8004672) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3027ba6539ea91773e06239e9464a59a') in 0.024566 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Ruysch_Leipzig.jpg
+  artifactKey: Guid(9982f96ebe6a44ce1be1bf98cfc7b26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Leipzig.jpg using Guid(9982f96ebe6a44ce1be1bf98cfc7b26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '22e26ff7a8d4f547e38b7ae89f426649') in 0.018195 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Ruysch_Glasgow.jpg
+  artifactKey: Guid(eb2b57b92e7464162b1959cf742ae441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Glasgow.jpg using Guid(eb2b57b92e7464162b1959cf742ae441) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '97c0dd83db0fa0d66dab1c793a84ca19') in 0.018151 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ruysch_Amsterdam.jpg
+  artifactKey: Guid(c0e00e21f50734834a2dc8838763a966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Amsterdam.jpg using Guid(c0e00e21f50734834a2dc8838763a966) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '97f3ab3f66b2d77acb20537441ee75ef') in 0.009308 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Ruysch_London_02.jpg
+  artifactKey: Guid(8e58bad6bb40847da9d56b61ff42f37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_London_02.jpg using Guid(8e58bad6bb40847da9d56b61ff42f37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '20c6481cd65a2410685695c47bb87e22') in 0.017774 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Ruysch_Toledo.jpg
+  artifactKey: Guid(9ae4c34209a484285a7255235d9276d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Toledo.jpg using Guid(9ae4c34209a484285a7255235d9276d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'a885165ee9811a1447dc3ccf08a9eafa') in 0.025631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Ruysch_Birmingham.jpg
+  artifactKey: Guid(f9345fc2394764e66b0a48bf5fc3f930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Birmingham.jpg using Guid(f9345fc2394764e66b0a48bf5fc3f930) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '92475c0dc8bf07b9d62be276038039f7') in 0.015110 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Ruysch_Den Haag_Hoogsteder.jpg
+  artifactKey: Guid(a5167c3016789463aa51baf08bf0899e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Den Haag_Hoogsteder.jpg using Guid(a5167c3016789463aa51baf08bf0899e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '56545086cc0cb011a33b5b92d607e324') in 0.025300 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 38.200085 seconds.
+  path: Assets/Ruysch_Wien_02.jpg
+  artifactKey: Guid(f4ce396d2f0b346c2aa849517e84d9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Wien_02.jpg using Guid(f4ce396d2f0b346c2aa849517e84d9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '870e4c3cfc958a6041e6940233f95d60') in 0.145376 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Ruysch_Wien_04.jpg
+  artifactKey: Guid(a2dff3a9bd6bc4a1f9dc30dfa657d1fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Wien_04.jpg using Guid(a2dff3a9bd6bc4a1f9dc30dfa657d1fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '96f6d7faad3d1c5a28abde622474948f') in 0.012932 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Ruysch_Wien_03.jpg
+  artifactKey: Guid(3803d2d11c81e4d3ab24967e612d5f7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ruysch_Wien_03.jpg using Guid(3803d2d11c81e4d3ab24967e612d5f7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '740649f8705b10bcd3c1ead2c991eb45') in 0.035309 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 389.575870 seconds.
+  path: Assets/Resources/vases/Background_3.jpg
+  artifactKey: Guid(854aa11c26aaaae4fbc2ca0d4227a75e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/vases/Background_3.jpg using Guid(854aa11c26aaaae4fbc2ca0d4227a75e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3377413e323b4fda2a7a0d80fc09f9aa') in 0.213718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Resources/vases/DALL·E 2024-08-06 11.23.52 - A dark, detailed still-life scene featuring a single ornate vase on a marble table. The vase is empty, with no flowers or foliage. The background is d.jpg
+  artifactKey: Guid(1c93b5484a811482184ed74715b195d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/vases/DALL·E 2024-08-06 11.23.52 - A dark, detailed still-life scene featuring a single ornate vase on a marble table. The vase is empty, with no flowers or foliage. The background is d.jpg using Guid(1c93b5484a811482184ed74715b195d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '16212c7c46d827c7700ead82dfa66bb5') in 0.112486 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.542676 seconds.
+  path: Assets/Resources/flowers/选中框 1.png
+  artifactKey: Guid(61c1429332a124b4ca6a3cdaa5eb82c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/flowers/选中框 1.png using Guid(61c1429332a124b4ca6a3cdaa5eb82c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'd442a6d84566c1e65f591d8f5a58e492') in 0.019998 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.353786 seconds.
+  path: Assets/Resources/Ruysch_Musscher _NYC_p.png
+  artifactKey: Guid(3674ef27ec70944a2a3a5d646a5cb32b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Ruysch_Musscher _NYC_p.png using Guid(3674ef27ec70944a2a3a5d646a5cb32b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3b08e23655b83706f2e4a43a3feee4ea') in 0.016415 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3507.184094 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e69770e96433b1b247f7742d2a606527') in 0.557530 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss
+  artifactKey: Guid(f6510cde8fcda4479b0d601e22c91bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss using Guid(f6510cde8fcda4479b0d601e22c91bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e80e86247d98ad45c1cba402616a544b') in 0.090881 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 268.221458 seconds.
+  path: Assets/Resources/Background/Background_2.jpg
+  artifactKey: Guid(87beb25fc55c04058b2a6e237682bb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Background/Background_2.jpg using Guid(87beb25fc55c04058b2a6e237682bb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1b50e163952dee61029aec6b4f2691dd') in 0.231996 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.235387 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Augsburg.jpg
+  artifactKey: Guid(85d647d8c29e5e847b0fa795d6ceb89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Augsburg.jpg using Guid(85d647d8c29e5e847b0fa795d6ceb89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '356a0bf9e9c0f636630906516877125e') in 0.037417 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Basel.jpg
+  artifactKey: Guid(dbe421d252e36214ba78c07f3f7daec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Basel.jpg using Guid(dbe421d252e36214ba78c07f3f7daec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'f5db60e5723335f7efad00d6be18bb03') in 0.097215 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Prag_NG_01.jpg
+  artifactKey: Guid(91be3f15af2e1fd4babcdb53d4565f06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Prag_NG_01.jpg using Guid(91be3f15af2e1fd4babcdb53d4565f06) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '741b53d14eef22d6db9b31c47daa8f30') in 0.042887 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Resources/Artwork/Ruysch_NYC_Czernin.jpg
+  artifactKey: Guid(7b9262b4bf3373b42b9cede9e6b4bf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_NYC_Czernin.jpg using Guid(7b9262b4bf3373b42b9cede9e6b4bf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'ce0ba29ef9aa608a0c1b8f48e5907e12') in 0.018960 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Resources/Artwork/Ruysch_München_02.jpg
+  artifactKey: Guid(82e30ab8e565e3b48af8049768a9be26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_München_02.jpg using Guid(82e30ab8e565e3b48af8049768a9be26) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '60d84df1345bc197f703d6c830c15e69') in 0.013466 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Dresden.jpg
+  artifactKey: Guid(777e0c14d06cf8c4bab7c3cefb039dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Dresden.jpg using Guid(777e0c14d06cf8c4bab7c3cefb039dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e720d6eb53d90f8e70f00241d25d1d49') in 0.018781 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Dublin.jpg
+  artifactKey: Guid(1b5057b1b0ba38548a9b08150a911318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Dublin.jpg using Guid(1b5057b1b0ba38548a9b08150a911318) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'fef896a8a56d18dee632db4be428765f') in 0.008937 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Den Haag_Mh.jpg
+  artifactKey: Guid(7e624b4735a5de6489bc3e0a4b974aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Den Haag_Mh.jpg using Guid(7e624b4735a5de6489bc3e0a4b974aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'a288ddaa2a2a6c32e69f7bb61c57d307') in 0.027257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Florenz_Uffizi_01.jpg
+  artifactKey: Guid(fb356e0de634dce4ba680fdee1620560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Florenz_Uffizi_01.jpg using Guid(fb356e0de634dce4ba680fdee1620560) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'b972733b4fbc8cd2a0e5b9d229b35ba6') in 0.011954 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Innsbruck.jpg
+  artifactKey: Guid(4efdac60d0e9a9849a0f7bf4aab5c5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Innsbruck.jpg using Guid(4efdac60d0e9a9849a0f7bf4aab5c5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '43e5fac11a77b2fc01a4fc972e040c7f') in 0.019656 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Bremen.jpg
+  artifactKey: Guid(c8a50438910d14b42b4069817dc53419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Bremen.jpg using Guid(c8a50438910d14b42b4069817dc53419) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1e7638dad105a8a93422240be9eeb6ef') in 0.010461 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Florenz_Pitti_02.jpg
+  artifactKey: Guid(d26fcffe587405341a15f83ba462f1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Florenz_Pitti_02.jpg using Guid(d26fcffe587405341a15f83ba462f1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '80bb615a371d2ac10befb60b22c987a5') in 0.016080 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Resources/Artwork/Ruysch_NYC_Sherman.jpg
+  artifactKey: Guid(e96e905b2366f654ea72a4a9a67cb397) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_NYC_Sherman.jpg using Guid(e96e905b2366f654ea72a4a9a67cb397) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '280c617d889aa562d60607d5604c3ea1') in 0.017072 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Karlsruhe_02.jpg
+  artifactKey: Guid(93a68055bb189db41b31f41108c95276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Karlsruhe_02.jpg using Guid(93a68055bb189db41b31f41108c95276) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '587b97bb7052525d69bd6388db149607') in 0.025977 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Florenz_Pitti_01.jpg
+  artifactKey: Guid(0e5f8d22d8cb7c745ae344f544781c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Florenz_Pitti_01.jpg using Guid(0e5f8d22d8cb7c745ae344f544781c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'ec2c8fa46a48edbf7b7822b2f914eeb1') in 0.022464 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Cologny.jpg
+  artifactKey: Guid(ea0d4d4a7d914084a92881af47798749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Cologny.jpg using Guid(ea0d4d4a7d914084a92881af47798749) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'b927c4d7bbcd52d6f341e41df83b685c') in 0.027185 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Hartford.jpg
+  artifactKey: Guid(96221ce219c117d41b0e785600088ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Hartford.jpg using Guid(96221ce219c117d41b0e785600088ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '8f8520fb87be31ba520cbf14ac262dd4') in 0.008129 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Resources/Artwork/Ruysch_London_02.jpg
+  artifactKey: Guid(3d4319f56995349448744280593ac5d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_London_02.jpg using Guid(3d4319f56995349448744280593ac5d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '25dd25743cc281a1437df9c038527dca') in 0.015576 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Musscher _NYC_p.png
+  artifactKey: Guid(14f80cdd487744841929fe50a4f41ecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Musscher _NYC_p.png using Guid(14f80cdd487744841929fe50a4f41ecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'bc4032a50163184ff1a1b6bf3a4317d7') in 0.011474 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Florenz_Uffizi_02.jpg
+  artifactKey: Guid(4b6c621d28d5b2b4b831fd134a549abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Florenz_Uffizi_02.jpg using Guid(4b6c621d28d5b2b4b831fd134a549abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1a0515c3eb593172559c0c221115607d') in 0.007030 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Rotterdam.jpg
+  artifactKey: Guid(df6b31453b6a0944684dea9d4aef148f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Rotterdam.jpg using Guid(df6b31453b6a0944684dea9d4aef148f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '057e0455fdad997e10bc3cf88a03938b') in 0.018163 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Birmingham.jpg
+  artifactKey: Guid(b04252f8c5b399b44b1591877f47e429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Birmingham.jpg using Guid(b04252f8c5b399b44b1591877f47e429) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '2f0294c690ba94c6785d7791ec8be112') in 0.008700 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Resources/Artwork/Ruysch_Fulda_3.jpg
+  artifactKey: Guid(78904d1b323a00944aad416e468e14b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Artwork/Ruysch_Fulda_3.jpg using Guid(78904d1b323a00944aad416e468e14b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'ec8b3e3588286dd1a29f5c9d51f25af5') in 0.020011 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
