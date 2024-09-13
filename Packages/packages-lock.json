@@ -23,6 +23,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.device-simulator.devices": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 1,
@@ -142,7 +149,7 @@
       }
     },
     "com.unity.vectorgraphics": {
-      "version": "2.0.0-preview.17",
+      "version": "2.0.0-preview.24",
       "depth": 0,
       "source": "registry",
       "dependencies": {
