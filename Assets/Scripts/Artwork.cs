@@ -6,6 +6,6 @@ public class Artwork : MonoBehaviour
 
     public RectTransform[] flowerAreas;
 
-    public GameObject[] flowerModels;
+    public GameObject[] flower3DModels;
 
 }
