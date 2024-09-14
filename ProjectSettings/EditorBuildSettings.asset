@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: bd69cfa840b5a4c488b6867ad145b60a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GalleryScene.unity
     guid: 09737bf5138ae4519b1dfc2550d45f6c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Puzzle.unity
     guid: dd5867e439496fc4cb231f0266ca3e86
   - enabled: 1
@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Portrait/Avatar.unity
     guid: 1daeb0957f7717646a1eb25a770b0651
+  - enabled: 1
+    path: Assets/Scenes/Portrait/Photo.unity
+    guid: 21a946ae53785544faa8b04037c8edcb
+  - enabled: 1
+    path: Assets/Scenes/Portrait/AI.unity
+    guid: 6d5758bfac496f7498d861c2799ed2d3
   m_configObjects: {}
