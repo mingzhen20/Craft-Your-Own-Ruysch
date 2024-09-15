@@ -50,7 +50,6 @@ public class ArtworkManager : MonoBehaviour
 
         if (clickedImage != null)
         {
-            // Display the selected artwork
             enlargedImageComponent.sprite = clickedImage.sprite;
 
             float originalWidth = clickedImage.sprite.texture.width;
@@ -65,16 +64,13 @@ public class ArtworkManager : MonoBehaviour
 
             enlargedImageDisplay.SetActive(true);
 
-              // 隐藏之前的 flowerAreas（如果有）
             if (currentArtwork != null)
             {
                 DisableFlowerAreas(currentArtwork);
             }
 
-                    // 更新当前显示的 Artwork
             currentArtwork = clickedButton.gameObject;
 
-            // 只为当前的 Artwork 显示 flowerAreas
             EnableFlowerAreas(artwork);
 
             foreach (RectTransform flowerArea in artwork.flowerAreas)
@@ -99,16 +95,14 @@ public class ArtworkManager : MonoBehaviour
         }
     }
 
-    // 启用当前 Artwork 的 flowerAreas
     void EnableFlowerAreas(Artwork artwork)
     {
         foreach (RectTransform flowerArea in artwork.flowerAreas)
         {
-            flowerArea.gameObject.SetActive(true); // 显示 flowerArea
+            flowerArea.gameObject.SetActive(true); 
         }
     }
 
-    // 禁用之前 Artwork 的 flowerAreas
     void DisableFlowerAreas(GameObject previousArtwork)
     {
         Artwork previousArtworkScript = previousArtwork.GetComponent<Artwork>();
@@ -116,7 +110,7 @@ public class ArtworkManager : MonoBehaviour
         {
             foreach (RectTransform flowerArea in previousArtworkScript.flowerAreas)
             {
-                flowerArea.gameObject.SetActive(false); // 隐藏 flowerArea
+                flowerArea.gameObject.SetActive(false); 
             }
         }
     }
