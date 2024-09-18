@@ -2,21 +2,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
+using System.Text;
 
 public class CameraCapture : MonoBehaviour
 {
     WebCamTexture webCamTexture;
-    public RawImage displayImage;       // 用于显示摄像头实时图像的UI组件
-    public RawImage resultImageDisplay; // 用于显示风格化结果的UI组件
-    private Texture2D capturedImage;    // 存储捕获的图片
-    private bool hasCaptured = false;   // 标记是否已经拍摄
+    public RawImage displayImage;
+    public RawImage resultImageDisplay; // 显示风格化图片的UI
+    private Texture2D capturedImage;
+    private bool hasCaptured = false;
+    private string apiKey = "R55LYUGpVsaLPIXUwcrhJ4wrG2ZX5KdE46jzs3m4"; // 在这里定义API Key
+
 
     void Start()
     {
-        StartCamera(); // 初始化摄像头
+        StartCamera();
     }
 
-    // 开始摄像头
     void StartCamera()
     {
         webCamTexture = new WebCamTexture();
@@ -25,7 +27,6 @@ public class CameraCapture : MonoBehaviour
         hasCaptured = false;
     }
 
-    // 停止摄像头
     void StopCamera()
     {
         if (webCamTexture != null && webCamTexture.isPlaying)
@@ -34,28 +35,46 @@ public class CameraCapture : MonoBehaviour
         }
     }
 
-    // 捕捉图片
+    // 捕捉图像
     public void CaptureImage()
     {
         if (!hasCaptured)
         {
-            // 捕获当前摄像头的画面
             capturedImage = new Texture2D(webCamTexture.width, webCamTexture.height);
             capturedImage.SetPixels(webCamTexture.GetPixels());
             capturedImage.Apply();
 
-            // 更新显示的图片为捕获的静态图像
             displayImage.texture = capturedImage;
 
-            // 停止摄像头预览
             StopCamera();
-
-            hasCaptured = true; // 标记为已捕获
+            hasCaptured = true;
         }
         else
         {
-            // 如果已经捕获过，重新启动摄像头以进行新的拍摄
             StartCamera();
+        }
+    }
+
+    // 获取可用的风格列表
+    public void GetAvailableStyles()
+    {
+        StartCoroutine(GetStyles());
+    }
+
+    // 调用DeepArt API获取风格列表
+    IEnumerator GetStyles()
+    {
+        UnityWebRequest request = UnityWebRequest.Get("https://api.deeparteffects.com/v1/noauth/styles");
+        request.SetRequestHeader("x-api-key", apiKey);
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("风格列表获取成功：" + request.downloadHandler.text);
+        }
+        else
+        {
+            Debug.LogError("获取风格列表失败: " + request.error);
         }
     }
 
@@ -68,41 +87,109 @@ public class CameraCapture : MonoBehaviour
             return;
         }
 
-        // 启动协程上传图片并应用风格
-        StartCoroutine(UploadImage(capturedImage.EncodeToJPG()));
+        // 将捕获的图像转换为Base64
+        byte[] imageBytes = capturedImage.EncodeToJPG();
+        string base64Image = System.Convert.ToBase64String(imageBytes);
+
+        // 调用API应用风格（示例使用巴洛克风格ID）
+        StartCoroutine(UploadImage(base64Image, "c7984b32-1560-11e7-afe2-06d95fe194ed"));  // 替换为你获取到的风格ID
     }
 
-    // 上传图片到DeepArt API并获取风格化后的图片
-    IEnumerator UploadImage(byte[] imageBytes)
+    // 上传图片并应用风格
+    IEnumerator UploadImage(string base64Image, string styleId)
     {
-        // 准备表单数据，添加图像文件
-        WWWForm form = new WWWForm();
-        form.AddBinaryData("file", imageBytes, "image.jpg", "image/jpeg");
+        string url = "https://api.deeparteffects.com/v1/noauth/upload";
 
-        // API URL 和 请求头
-        string apiUrl = "https://api.deeparteffects.com/v1/noauth/upload";
-        using (UnityWebRequest www = UnityWebRequest.Post(apiUrl, form))
+        // 创建请求体
+        string jsonRequestBody = JsonUtility.ToJson(new
         {
-            // 设置API密钥（注意：真实项目中应对密钥进行妥善保管）
-            www.SetRequestHeader("x-api-key", "R55LYUGpVsaLPIXUwcrhJ4wrG2ZX5KdE46jzs3m4");
+            styleId = styleId,
+            imageBase64Encoded = base64Image,
+            imageSize = "512"
+        });
 
-            // 发送请求并等待响应
-            yield return www.SendWebRequest();
+        byte[] postData = Encoding.UTF8.GetBytes(jsonRequestBody);
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+        request.uploadHandler = new UploadHandlerRaw(postData);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("x-api-key", apiKey);
 
-            // 处理请求结果
-            if (www.result != UnityWebRequest.Result.Success)
+        Debug.Log("上传的请求体: " + jsonRequestBody);
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("图像上传成功");
+            // 解析返回的 submissionId
+            var response = JsonUtility.FromJson<DeepArtResponse>(request.downloadHandler.text);
+            StartCoroutine(GetResult(response.submissionId));
+        }
+        else
+        {
+            Debug.LogError("图像上传失败: " + request.error);
+            Debug.LogError("服务器响应: " + request.downloadHandler.text);
+        }
+    }
+
+    // 获取风格化后的图像结果
+    IEnumerator GetResult(string submissionId)
+    {
+        string url = $"https://api.deeparteffects.com/v1/noauth/result?submissionId={submissionId}";
+
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            var response = JsonUtility.FromJson<DeepArtResult>(request.downloadHandler.text);
+
+            if (response.status == "finished")
             {
-                Debug.LogError("上传图片失败: " + www.error);
+                StartCoroutine(DownloadImage(response.url));
             }
             else
             {
-                Debug.Log("风格应用成功！");
-
-                // 获取响应的图片数据并显示风格化的图像
-                Texture2D resultImage = new Texture2D(2, 2);
-                resultImage.LoadImage(www.downloadHandler.data);
-                resultImageDisplay.texture = resultImage; // 更新显示风格化后的图片
+                Debug.LogError("风格转换仍在处理中。状态: " + response.status);
             }
         }
+        else
+        {
+            Debug.LogError("获取风格化结果失败: " + request.error);
+            Debug.LogError("服务器响应: " + request.downloadHandler.text);
+        }
     }
+
+    // 下载并显示风格化后的图像
+    IEnumerator DownloadImage(string imageUrl)
+    {
+        UnityWebRequest request = UnityWebRequestTexture.GetTexture(imageUrl);
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Texture2D styledTexture = DownloadHandlerTexture.GetContent(request);
+            resultImageDisplay.texture = styledTexture;
+            Debug.Log("风格化图片下载并显示成功。");
+        }
+        else
+        {
+            Debug.LogError("下载风格化图像失败: " + request.error);
+        }
+    }
+}
+
+// API响应的帮助类
+[System.Serializable]
+public class DeepArtResponse
+{
+    public string submissionId;
+}
+
+[System.Serializable]
+public class DeepArtResult
+{
+    public string status;
+    public string url;
 }

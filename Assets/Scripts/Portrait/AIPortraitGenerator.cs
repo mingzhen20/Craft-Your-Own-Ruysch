@@ -22,9 +22,16 @@ public class StableDiffusionGenerator : MonoBehaviour
 
     void GenerateImage()
     {
-        string prompt = promptInput.text;  // 获取用户输入的关键词
-        StartCoroutine(SendGenerateRequest(prompt));
+        // Rachel Ruysch 风格的巴洛克人物肖像，不包含背景或其他物品
+        string defaultPrompt = "A self-portrait in the style of Rachel Ruysch, baroque style, soft and natural lighting, rich colors, intricate details, smooth textures, 17th century oil painting, head and shoulders portrait, no background, focus on the face and expression";
+
+        // 获取用户输入的额外关键词
+        string userPrompt = promptInput.text;
+        string finalPrompt = defaultPrompt + ", " + userPrompt;
+
+        StartCoroutine(SendGenerateRequest(finalPrompt));
     }
+
 
     IEnumerator SendGenerateRequest(string prompt)
     {
