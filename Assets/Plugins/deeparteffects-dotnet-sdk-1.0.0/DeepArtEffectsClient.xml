@@ -1,0 +1,1364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeepArtEffectsClient</name>
+    </assembly>
+    <members>
+        <member name="T:Deeparteffects.Sdk.Api.IDefaultApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultGet(System.String)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>Result</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultGetWithHttpInfo(System.String)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>ApiResponse of Result</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultOptions">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultOptionsWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesGet">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Styles</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesGetWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Styles</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesOptions">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesOptionsWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadOptions">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadOptionsWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadPost(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>UploadResponse</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadPostWithHttpInfo(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>ApiResponse of UploadResponse</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultGetAsync(System.String)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>Task of Result</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultGetAsyncWithHttpInfo(System.String)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>Task of ApiResponse (Result)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultOptionsAsync">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.ResultOptionsAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Empty)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesGetAsync">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Styles</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesGetAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Styles)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesOptionsAsync">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.StylesOptionsAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Empty)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadOptionsAsync">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadOptionsAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Empty)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadPostAsync(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>Task of UploadResponse</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.IDefaultApi.UploadPostAsyncWithHttpInfo(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>Task of ApiResponse (UploadResponse)</returns></member>
+        <member name="T:Deeparteffects.Sdk.Api.DefaultApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Api.DefaultApi" /> class.
+            </summary>
+            <returns></returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.#ctor(Deeparteffects.Sdk.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Api.DefaultApi" /> class
+            using Configuration object
+            </summary>
+            <param name="configuration">An instance of Configuration</param>
+            <returns></returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <value>The base path</value></member>
+        <member name="P:Deeparteffects.Sdk.Api.DefaultApi.Configuration">
+            <summary>
+            Gets or sets the configuration object
+            </summary>
+            <value>An instance of the Configuration</value></member>
+        <member name="P:Deeparteffects.Sdk.Api.DefaultApi.ExceptionFactory">
+            <summary>
+            Provides a factory method hook for the creation of exceptions.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.DefaultHeader">
+            <summary>
+            Gets the default header.
+            </summary>
+            <returns>Dictionary of HTTP header</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.AddDefaultHeader(System.String,System.String)">
+            <summary>
+            Add default header.
+            </summary>
+            <param name="key">Header field name.</param>
+            <param name="value">Header field value.</param>
+            <returns></returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultGet(System.String)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>Result</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultGetWithHttpInfo(System.String)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>ApiResponse of Result</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultGetAsync(System.String)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>Task of Result</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultGetAsyncWithHttpInfo(System.String)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="submissionId"> (optional)</param>
+            <returns>Task of ApiResponse (Result)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultOptions">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultOptionsWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultOptionsAsync">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.ResultOptionsAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Empty)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesGet">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Styles</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesGetWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Styles</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesGetAsync">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Styles</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesGetAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Styles)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesOptions">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesOptionsWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesOptionsAsync">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.StylesOptionsAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Empty)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadOptions">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadOptionsWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadOptionsAsync">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of Empty</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadOptionsAsyncWithHttpInfo">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (Empty)</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadPost(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>UploadResponse</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadPostWithHttpInfo(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>ApiResponse of UploadResponse</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadPostAsync(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>Task of UploadResponse</returns></member>
+        <member name="M:Deeparteffects.Sdk.Api.DefaultApi.UploadPostAsyncWithHttpInfo(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            </summary>
+            <exception cref="!:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="uploadRequest"></param>
+            <returns>Task of ApiResponse (UploadResponse)</returns></member>
+        <member name="T:Deeparteffects.Sdk.Client.ApiClient">
+            <summary>
+            API client is mainly responsible for making the HTTP call to the API backend.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.InterceptRequest(RestSharp.IRestRequest)">
+            <summary>
+            Allows for extending request processing for <see cref="T:Deeparteffects.Sdk.Client.ApiClient" /> generated code.
+            </summary>
+            <param name="request">The RestSharp request object</param></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.InterceptResponse(RestSharp.IRestRequest,RestSharp.IRestResponse)">
+            <summary>
+            Allows for extending response processing for <see cref="T:Deeparteffects.Sdk.Client.ApiClient" /> generated code.
+            </summary>
+            <param name="request">The RestSharp request object</param>
+            <param name="response">The RestSharp response object</param></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Client.ApiClient" /> class
+            with default configuration and base path (https://api.deeparteffects.com/v1).
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.#ctor(Deeparteffects.Sdk.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Client.ApiClient" /> class
+            with default base path (https://api.deeparteffects.com/v1).
+            </summary>
+            <param name="config">An instance of Configuration.</param></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Client.ApiClient" /> class
+            with default configuration.
+            </summary>
+            <param name="basePath">The base path.</param></member>
+        <member name="F:Deeparteffects.Sdk.Client.ApiClient.Default">
+            <summary>
+            Gets or sets the default API client for making HTTP calls.
+            </summary>
+            <value>The default API client.</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.ApiClient.Configuration">
+            <summary>
+            Gets or sets the Configuration.
+            </summary>
+            <value>An instance of the Configuration.</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.ApiClient.RestClient">
+            <summary>
+            Gets or sets the RestClient.
+            </summary>
+            <value>An instance of the RestClient</value></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.CallApi(System.String,RestSharp.Method,System.Collections.Generic.Dictionary{System.String,System.String},System.Object,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,RestSharp.FileParameter},System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Makes the HTTP request (Sync).
+            </summary>
+            <param name="path">URL path.</param>
+            <param name="method">HTTP method.</param>
+            <param name="queryParams">Query parameters.</param>
+            <param name="postBody">HTTP body (POST request).</param>
+            <param name="headerParams">Header parameters.</param>
+            <param name="formParams">Form parameters.</param>
+            <param name="fileParams">File parameters.</param>
+            <param name="pathParams">Path parameters.</param>
+            <param name="contentType">Content Type of the request</param>
+            <returns>Object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.CallApiAsync(System.String,RestSharp.Method,System.Collections.Generic.Dictionary{System.String,System.String},System.Object,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,RestSharp.FileParameter},System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Makes the asynchronous HTTP request.
+            </summary>
+            <param name="path">URL path.</param>
+            <param name="method">HTTP method.</param>
+            <param name="queryParams">Query parameters.</param>
+            <param name="postBody">HTTP body (POST request).</param>
+            <param name="headerParams">Header parameters.</param>
+            <param name="formParams">Form parameters.</param>
+            <param name="fileParams">File parameters.</param>
+            <param name="pathParams">Path parameters.</param>
+            <param name="contentType">Content type.</param>
+            <returns>The Task instance.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.EscapeString(System.String)">
+            <summary>
+            Escape string (url-encoded).
+            </summary>
+            <param name="str">String to be escaped.</param>
+            <returns>Escaped string.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.ParameterToFile(System.String,System.IO.Stream)">
+            <summary>
+            Create FileParameter based on Stream.
+            </summary>
+            <param name="name">Parameter name.</param>
+            <param name="stream">Input stream.</param>
+            <returns>FileParameter.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.ParameterToString(System.Object)">
+            <summary>
+            If parameter is DateTime, output in a formatted string (default ISO 8601), customizable with Configuration.DateTime.
+            If parameter is a list, join the list with ",".
+            Otherwise just return the string.
+            </summary>
+            <param name="obj">The parameter (header, path, query, form).</param>
+            <returns>Formatted string.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.Deserialize(RestSharp.IRestResponse,System.Type)">
+            <summary>
+            Deserialize the JSON string into a proper object.
+            </summary>
+            <param name="response">The HTTP response.</param>
+            <param name="type">Object type.</param>
+            <returns>Object representation of the JSON string.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.Serialize(System.Object)">
+            <summary>
+            Serialize an input (model) into JSON string
+            </summary>
+            <param name="obj">Object.</param>
+            <returns>JSON string.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.SelectHeaderContentType(System.String[])">
+            <summary>
+            Select the Content-Type header's value from the given content-type array:
+            if JSON exists in the given array, use it;
+            otherwise use the first one defined in 'consumes'
+            </summary>
+            <param name="contentTypes">The Content-Type array to select from.</param>
+            <returns>The Content-Type header to use.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.SelectHeaderAccept(System.String[])">
+            <summary>
+            Select the Accept header's value from the given accepts array:
+            if JSON exists in the given array, use it;
+            otherwise use all of them (joining into a string)
+            </summary>
+            <param name="accepts">The accepts array to select from.</param>
+            <returns>The Accept header to use.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.Base64Encode(System.String)">
+            <summary>
+            Encode string in base64 format.
+            </summary>
+            <param name="text">String to be encoded.</param>
+            <returns>Encoded string.</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.ConvertType(System.dynamic,System.Type)">
+            <summary>
+            Dynamically cast the object into target type.
+            Ref: http://stackoverflow.com/questions/4925718/c-dynamic-runtime-cast
+            </summary>
+            <param name="source">Object to be casted</param>
+            <param name="dest">Target type</param>
+            <returns>Casted object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.ReadAsBytes(System.IO.Stream)">
+            <summary>
+            Convert stream to byte array
+            Credit/Ref: http://stackoverflow.com/a/221941/677735
+            </summary>
+            <param name="input">Input stream to be converted</param>
+            <returns>Byte array</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.UrlEncode(System.String)">
+            <summary>
+            URL encode a string
+            Credit/Ref: https://github.com/restsharp/RestSharp/blob/master/RestSharp/Extensions/StringExtensions.cs#L50
+            </summary>
+            <param name="input">String to be URL encoded</param>
+            <returns>Byte array</returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiClient.SanitizeFilename(System.String)">
+            <summary>
+            Sanitize filename by removing the path
+            </summary>
+            <param name="filename">Filename</param>
+            <returns>Filename</returns></member>
+        <member name="T:Deeparteffects.Sdk.Client.ApiException">
+            <summary>
+            API Exception
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Client.ApiException.ErrorCode">
+            <summary>
+            Gets or sets the error code (HTTP status code)
+            </summary>
+            <value>The error code (HTTP status code).</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.ApiException.ErrorContent">
+            <summary>
+            Gets or sets the error content (body json object)
+            </summary>
+            <value>The error content (Http response body).</value></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Client.ApiException" /> class.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Client.ApiException" /> class.
+            </summary>
+            <param name="errorCode">HTTP status code.</param>
+            <param name="message">Error message.</param></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiException.#ctor(System.Int32,System.String,System.dynamic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Client.ApiException" /> class.
+            </summary>
+            <param name="errorCode">HTTP status code.</param>
+            <param name="message">Error message.</param>
+            <param name="errorContent">Error content.</param></member>
+        <member name="T:Deeparteffects.Sdk.Client.ApiResponse`1">
+            <summary>
+            API Response
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Client.ApiResponse`1.StatusCode">
+            <summary>
+            Gets or sets the status code (HTTP status code)
+            </summary>
+            <value>The status code.</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.ApiResponse`1.Headers">
+            <summary>
+            Gets or sets the HTTP headers
+            </summary>
+            <value>HTTP headers</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.ApiResponse`1.Data">
+            <summary>
+            Gets or sets the data (parsed HTTP body)
+            </summary>
+            <value>The data.</value></member>
+        <member name="M:Deeparteffects.Sdk.Client.ApiResponse`1.#ctor(System.Int32,System.Collections.Generic.IDictionary{System.String,System.String},`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Client.ApiResponse`1" /> class.
+            </summary>
+            <param name="statusCode">HTTP status code.</param>
+            <param name="headers">HTTP headers.</param>
+            <param name="data">Data (parsed HTTP body)</param></member>
+        <member name="T:Deeparteffects.Sdk.Client.Configuration">
+            <summary>
+            Represents a set of configuration settings
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.#ctor(Deeparteffects.Sdk.Client.ApiClient,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the Configuration class with different settings
+            </summary>
+            <param name="apiClient">Api client</param>
+            <param name="defaultHeader">Dictionary of default HTTP header</param>
+            <param name="username">Username</param>
+            <param name="password">Password</param>
+            <param name="accessToken">accessToken</param>
+            <param name="apiKey">Dictionary of API key</param>
+            <param name="apiKeyPrefix">Dictionary of API key prefix</param>
+            <param name="tempFolderPath">Temp folder path</param>
+            <param name="dateTimeFormat">DateTime format string</param>
+            <param name="timeout">HTTP connection timeout (in milliseconds)</param>
+            <param name="userAgent">HTTP user agent</param></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.#ctor(Deeparteffects.Sdk.Client.ApiClient)">
+            <summary>
+            Initializes a new instance of the Configuration class.
+            </summary>
+            <param name="apiClient">Api client.</param></member>
+        <member name="F:Deeparteffects.Sdk.Client.Configuration.Version">
+            <summary>
+            Version of the package.
+            </summary>
+            <value>Version of the package.</value></member>
+        <member name="F:Deeparteffects.Sdk.Client.Configuration.Default">
+            <summary>
+            Gets or sets the default Configuration.
+            </summary>
+            <value>Configuration.</value></member>
+        <member name="F:Deeparteffects.Sdk.Client.Configuration.DefaultExceptionFactory">
+            <summary>
+            Default creation of exceptions for a given method name and response object
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.Timeout">
+            <summary>
+            Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
+            </summary>
+            <value>Timeout.</value></member>
+        <member name="F:Deeparteffects.Sdk.Client.Configuration.ApiClient">
+            <summary>
+            Gets or sets the default API client for making HTTP calls.
+            </summary>
+            <value>The API client.</value></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.setApiClientUsingDefault(Deeparteffects.Sdk.Client.ApiClient)">
+            <summary>
+            Set the ApiClient using Default or ApiClient instance.
+            </summary>
+            <param name="apiClient">An instance of ApiClient.</param>
+            <returns></returns></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.DefaultHeader">
+            <summary>
+            Gets or sets the default header.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.AddDefaultHeader(System.String,System.String)">
+            <summary>
+            Add default header.
+            </summary>
+            <param name="key">Header field name.</param>
+            <param name="value">Header field value.</param>
+            <returns></returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.AddApiKey(System.String,System.String)">
+            <summary>
+            Add Api Key Header.
+            </summary>
+            <param name="key">Api Key name.</param>
+            <param name="value">Api Key value.</param>
+            <returns></returns></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.AddApiKeyPrefix(System.String,System.String)">
+            <summary>
+            Sets the API key prefix.
+            </summary>
+            <param name="key">Api Key name.</param>
+            <param name="value">Api Key value.</param></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.UserAgent">
+            <summary>
+            Gets or sets the HTTP user agent.
+            </summary>
+            <value>Http user agent.</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.Username">
+            <summary>
+            Gets or sets the username (HTTP basic authentication).
+            </summary>
+            <value>The username.</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.Password">
+            <summary>
+            Gets or sets the password (HTTP basic authentication).
+            </summary>
+            <value>The password.</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.AccessToken">
+            <summary>
+            Gets or sets the access token for OAuth2 authentication.
+            </summary>
+            <value>The access token.</value></member>
+        <member name="F:Deeparteffects.Sdk.Client.Configuration.ApiKey">
+            <summary>
+            Gets or sets the API key based on the authentication name.
+            </summary>
+            <value>The API key.</value></member>
+        <member name="F:Deeparteffects.Sdk.Client.Configuration.ApiKeyPrefix">
+            <summary>
+            Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
+            </summary>
+            <value>The prefix of the API key.</value></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.GetApiKeyWithPrefix(System.String)">
+            <summary>
+            Get the API key with prefix.
+            </summary>
+            <param name="apiKeyIdentifier">API key identifier (authentication scheme).</param>
+            <returns>API key with prefix.</returns></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.TempFolderPath">
+            <summary>
+            Gets or sets the temporary folder path to store the files downloaded from the server.
+            </summary>
+            <value>Folder path.</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.Configuration.DateTimeFormat">
+            <summary>
+            Gets or sets the the date time format used when serializing in the ApiClient
+            By default, it's set to ISO 8601 - "o", for others see:
+            https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx
+            and https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx
+            No validation is done to ensure that the string you're providing is valid
+            </summary>
+            <value>The DateTimeFormat string</value></member>
+        <member name="M:Deeparteffects.Sdk.Client.Configuration.ToDebugReport">
+            <summary>
+            Returns a string with essential information for debugging.
+            </summary></member>
+        <member name="T:Deeparteffects.Sdk.Client.ExceptionFactory">
+            <summary>
+            A delegate to ExceptionFactory method
+            </summary>
+            <param name="methodName">Method name</param>
+            <param name="response">Response</param>
+            <returns>Exceptions</returns></member>
+        <member name="T:Deeparteffects.Sdk.Client.IApiAccessor">
+            <summary>
+            Represents configuration aspects required to interact with the API endpoints.
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Client.IApiAccessor.Configuration">
+            <summary>
+            Gets or sets the configuration object
+            </summary>
+            <value>An instance of the Configuration</value></member>
+        <member name="M:Deeparteffects.Sdk.Client.IApiAccessor.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value></member>
+        <member name="P:Deeparteffects.Sdk.Client.IApiAccessor.ExceptionFactory">
+            <summary>
+            Provides a factory method hook for the creation of exceptions.
+            </summary></member>
+        <member name="T:Deeparteffects.Sdk.Model.Empty">
+            <summary>
+            Empty
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Empty.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Model.Empty" /> class.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Empty.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Empty.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Empty.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Empty.Equals(Deeparteffects.Sdk.Model.Empty)">
+            <summary>
+            Returns true if Empty instances are equal
+            </summary>
+            <param name="other">Instance of Empty to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Empty.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns></member>
+        <member name="T:Deeparteffects.Sdk.Model.Error">
+            <summary>
+            Error
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Error.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Model.Error" /> class.
+            </summary>
+            <param name="Message">Message.</param></member>
+        <member name="P:Deeparteffects.Sdk.Model.Error.Message">
+            <summary>
+            Gets or Sets Message
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Error.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Error.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Error.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Error.Equals(Deeparteffects.Sdk.Model.Error)">
+            <summary>
+            Returns true if Error instances are equal
+            </summary>
+            <param name="other">Instance of Error to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Error.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns></member>
+        <member name="T:Deeparteffects.Sdk.Model.Result">
+            <summary>
+            Result
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Result.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Model.Result" /> class.
+            </summary>
+            <param name="Status">Submissiond status. Can be 'new', 'error', 'processing', 'finished'.</param>
+            <param name="Url">Result url for the artwork.</param></member>
+        <member name="P:Deeparteffects.Sdk.Model.Result.Status">
+            <summary>
+            Submissiond status. Can be 'new', 'error', 'processing', 'finished'
+            </summary>
+            <value>Submissiond status. Can be 'new', 'error', 'processing', 'finished'</value></member>
+        <member name="P:Deeparteffects.Sdk.Model.Result.Url">
+            <summary>
+            Result url for the artwork
+            </summary>
+            <value>Result url for the artwork</value></member>
+        <member name="M:Deeparteffects.Sdk.Model.Result.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Result.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Result.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Result.Equals(Deeparteffects.Sdk.Model.Result)">
+            <summary>
+            Returns true if Result instances are equal
+            </summary>
+            <param name="other">Instance of Result to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Result.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns></member>
+        <member name="T:Deeparteffects.Sdk.Model.Style">
+            <summary>
+            Style
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Style.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Model.Style" /> class.
+            </summary>
+            <param name="Id">The unique identifier for a style.</param>
+            <param name="Title">Style title.</param>
+            <param name="Url">Style URL.</param>
+            <param name="Description">Style description.</param></member>
+        <member name="P:Deeparteffects.Sdk.Model.Style.Id">
+            <summary>
+            The unique identifier for a style
+            </summary>
+            <value>The unique identifier for a style</value></member>
+        <member name="P:Deeparteffects.Sdk.Model.Style.Title">
+            <summary>
+            Style title
+            </summary>
+            <value>Style title</value></member>
+        <member name="P:Deeparteffects.Sdk.Model.Style.Url">
+            <summary>
+            Style URL
+            </summary>
+            <value>Style URL</value></member>
+        <member name="P:Deeparteffects.Sdk.Model.Style.Description">
+            <summary>
+            Style description
+            </summary>
+            <value>Style description</value></member>
+        <member name="M:Deeparteffects.Sdk.Model.Style.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Style.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Style.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Style.Equals(Deeparteffects.Sdk.Model.Style)">
+            <summary>
+            Returns true if Style instances are equal
+            </summary>
+            <param name="other">Instance of Style to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Style.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns></member>
+        <member name="T:Deeparteffects.Sdk.Model.Styles">
+            <summary>
+            Styles
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Styles.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Model.Styles" /> class.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.Styles.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Styles.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Styles.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Styles.Equals(Deeparteffects.Sdk.Model.Styles)">
+            <summary>
+            Returns true if Styles instances are equal
+            </summary>
+            <param name="other">Instance of Styles to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.Styles.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns></member>
+        <member name="T:Deeparteffects.Sdk.Model.UploadRequest">
+            <summary>
+            UploadRequest
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadRequest.#ctor(System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Model.UploadRequest" /> class.
+            </summary>
+            <param name="StyleId">The unique identifier for a style.</param>
+            <param name="ImageBase64Encoded">Base64 decoded image.</param>
+            <param name="ImageSize">Image size in px. Picture will be resized for processing..</param>
+            <param name="PartnerId">The unique identifier for a partner with dedicated api access..</param></member>
+        <member name="P:Deeparteffects.Sdk.Model.UploadRequest.StyleId">
+            <summary>
+            The unique identifier for a style
+            </summary>
+            <value>The unique identifier for a style</value></member>
+        <member name="P:Deeparteffects.Sdk.Model.UploadRequest.ImageBase64Encoded">
+            <summary>
+            Base64 decoded image
+            </summary>
+            <value>Base64 decoded image</value></member>
+        <member name="P:Deeparteffects.Sdk.Model.UploadRequest.ImageSize">
+            <summary>
+            Image size in px. Picture will be resized for processing.
+            </summary>
+            <value>Image size in px. Picture will be resized for processing.</value></member>
+        <member name="P:Deeparteffects.Sdk.Model.UploadRequest.PartnerId">
+            <summary>
+            The unique identifier for a partner with dedicated api access.
+            </summary>
+            <value>The unique identifier for a partner with dedicated api access.</value></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadRequest.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadRequest.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadRequest.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadRequest.Equals(Deeparteffects.Sdk.Model.UploadRequest)">
+            <summary>
+            Returns true if UploadRequest instances are equal
+            </summary>
+            <param name="other">Instance of UploadRequest to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadRequest.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns></member>
+        <member name="T:Deeparteffects.Sdk.Model.UploadResponse">
+            <summary>
+            UploadResponse
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadResponse.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Deeparteffects.Sdk.Model.UploadResponse" /> class.
+            </summary>
+            <param name="SubmissionId">SubmissionId.</param></member>
+        <member name="P:Deeparteffects.Sdk.Model.UploadResponse.SubmissionId">
+            <summary>
+            Gets or Sets SubmissionId
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadResponse.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadResponse.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadResponse.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadResponse.Equals(Deeparteffects.Sdk.Model.UploadResponse)">
+            <summary>
+            Returns true if UploadResponse instances are equal
+            </summary>
+            <param name="other">Instance of UploadResponse to be compared</param>
+            <returns>Boolean</returns></member>
+        <member name="M:Deeparteffects.Sdk.Model.UploadResponse.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns></member>
+        <member name="T:Deeparteffects.Sdk.Signers.AWS4SignerBase">
+            <summary>
+            Common methods and properties for all AWS4 signer variants
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerBase.EndpointUri">
+            <summary>
+            The service endpoint, including the path to any resource.
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerBase.HttpMethod">
+            <summary>
+            The HTTP verb for the request, e.g. GET.
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerBase.Service">
+            <summary>
+            The signing name of the service, e.g. 's3'.
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerBase.Region">
+            <summary>
+            The system name of the AWS region associated with the endpoint, e.g. us-east-1.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerBase.CanonicalizeHeaderNames(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Returns the canonical collection of header names that will be included in
+            the signature. For AWS4, all header names must be included in the process
+            in sorted canonicalized order.
+            </summary>
+            <param name="headers">
+            The set of header names and values that will be sent with the request
+            </param>
+            <returns>
+            The set of header names canonicalized to a flattened, ;-delimited string
+            </returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerBase.CanonicalizeHeaders(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Computes the canonical headers with values for the request.
+            For AWS4, all headers must be included in the signing process.
+            </summary>
+            <param name="headers">The set of headers to be encoded</param>
+            <returns>Canonicalized string of headers with values</returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerBase.CanonicalizeRequest(System.Uri,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns the canonical request string to go into the signer process; this
+            consists of several canonical sub-parts.
+            </summary>
+            <param name="endpointUri"></param>
+            <param name="httpMethod"></param>
+            <param name="queryParameters"></param>
+            <param name="canonicalizedHeaderNames">
+            The set of header names to be included in the signature, formatted as a flattened, ;-delimited string
+            </param>
+            <param name="canonicalizedHeaders">
+            </param>
+            <param name="bodyHash">
+            Precomputed SHA256 hash of the request body content. For chunked encoding this
+            should be the fixed string ''.
+            </param>
+            <returns>String representing the canonicalized request for signing</returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerBase.CanonicalResourcePath(System.Uri)">
+            <summary>
+            Returns the canonicalized resource path for the service endpoint
+            </summary>
+            <param name="endpointUri">Endpoint to the service/resource</param>
+            <returns>Canonicalized resource path for the endpoint</returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerBase.DeriveSigningKey(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Compute and return the multi-stage signing key for the request.
+            </summary>
+            <param name="algorithm">Hashing algorithm to use</param>
+            <param name="awsSecretAccessKey">The clear-text AWS secret key</param>
+            <param name="region">The region in which the service request will be processed</param>
+            <param name="date">Date of the request, in yyyyMMdd format</param>
+            <param name="service">The name of the service being called by the request</param>
+            <returns>Computed signing key</returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerBase.ComputeKeyedHash(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            Compute and return the hash of a data blob using the specified algorithm
+            and key
+            </summary>
+            <param name="algorithm">Algorithm to use for hashing</param>
+            <param name="key">Hash key</param>
+            <param name="data">Data blob</param>
+            <returns>Hash of the data</returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerBase.ToHexString(System.Byte[],System.Boolean)">
+            <summary>
+            Helper to format a byte array into string
+            </summary>
+            <param name="data">The data blob to process</param>
+            <param name="lowercase">If true, returns hex digits in lower case form</param>
+            <returns>String version of the data</returns></member>
+        <member name="T:Deeparteffects.Sdk.Signers.AWS4SignerForAuthorizationHeader">
+            <summary>
+            Sample AWS4 signer demonstrating how to sign requests to Amazon S3
+            using an 'Authorization' header.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerForAuthorizationHeader.ComputeSignature(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Computes an AWS4 signature for a request, ready for inclusion as an
+            'Authorization' header.
+            </summary>
+            <param name="headers">
+            The request headers; 'Host' and 'X-Amz-Date' will be added to this set.
+            </param>
+            <param name="queryParameters">
+            Any query parameters that will be added to the endpoint. The parameters
+            should be specified in canonical format.
+            </param>
+            <param name="bodyHash">
+            Precomputed SHA256 hash of the request body content; this value should also
+            be set as the header 'X-Amz-Content-SHA256' for non-streaming uploads.
+            </param>
+            <param name="awsAccessKey">
+            The user's AWS Access Key.
+            </param>
+            <param name="awsSecretKey">
+            The user's AWS Secret Key.
+            </param>
+            <returns>
+            The computed authorization string for the request. This value needs to be set as the
+            header 'Authorization' on the subsequent HTTP request.
+            </returns></member>
+        <member name="T:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload">
+            <summary>
+            Sample AWS4 signer demonstrating how to sign 'chunked' uploads
+            to Amazon S3 using an Authorization header.
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.LastComputedSignature">
+            <summary>
+            Tracks the previously computed signature value; for chunk 0 this will
+            contain the signature included in the Authorization header. For subsequent
+            chunks it contains the computed signature of the prior chunk.
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.DateTimeStamp">
+            <summary>
+            Date and time of the original signing computation, in ISO 8601 basic format,
+            reused for each chunk
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.Scope">
+            <summary>
+            The scope value of the original signing computation, reused for each chunk
+            </summary></member>
+        <member name="P:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.SigningKey">
+            <summary>
+            The derived signing key used in the original signature computation and
+            re-used for each chunk
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.ComputeSignature(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Computes an AWS4 signature for a request, ready for inclusion as an
+            'Authorization' header.
+            </summary>
+            <param name="headers">
+            The request headers; 'Host' and 'X-Amz-Date' will be added to this set.
+            </param>
+            <param name="queryParameters">
+            Any query parameters that will be added to the endpoint. The parameters
+            should be specified in canonical format.
+            </param>
+            <param name="bodyHash">
+            Precomputed SHA256 hash of the request body content; this value should also
+            be set as the header 'X-Amz-Content-SHA256' for non-streaming uploads.
+            </param>
+            <param name="awsAccessKey">
+            The user's AWS Access Key.
+            </param>
+            <param name="awsSecretKey">
+            The user's AWS Secret Key.
+            </param>
+            <returns>
+            The computed authorization string for the request. This value needs to be set as the
+            header 'Authorization' on the subsequent HTTP request.
+            </returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.CalculateChunkedContentLength(System.Int64,System.Int64)">
+            <summary>
+            Calculates the expanded payload size of our data when it is chunked
+            </summary>
+            <param name="originalLength">
+            The true size of the data payload to be uploaded
+            </param>
+            <param name="chunkSize">
+            The size of each chunk we intend to send; each chunk will be
+            prefixed with signed header data, expanding the overall size
+            by a determinable amount
+            </param>
+            <returns>
+            The overall payload size to use as content-length on a chunked upload
+            </returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.CalculateChunkHeaderLength(System.Int64)">
+            <summary>
+            Returns the size of a chunk header, which only varies depending
+            on the selected chunk size
+            </summary>
+            <param name="chunkSize">
+            The intended size of each chunk; this is placed into the chunk
+            header
+            </param>
+            <returns>
+            The overall size of the header that will prefix the user data in
+            each chunk
+            </returns></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerForChunkedUpload.ConstructSignedChunk(System.Int64,System.Byte[])">
+            <summary>
+            Returns a chunk for upload consisting of the signed 'header' or chunk
+            prefix plus the user data. The signature of the chunk incorporates the
+            signature of the previous chunk (or, if the first chunk, the signature
+            of the headers portion of the request).
+            </summary>
+            <param name="userDataLen">
+            The length of the user data contained in userData
+            </param>
+            <param name="userData">
+            Contains the user data to be sent in the upload chunk
+            </param>
+            <returns>
+            A new buffer of data for upload containing the chunk header plus user data
+            </returns></member>
+        <member name="T:Deeparteffects.Sdk.Signers.AWS4SignerForPOST">
+            <summary>
+            Sample AWS4 signer demonstrating how to sign POST requests to Amazon S3
+            using a policy.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerForPOST.ComputeSignature(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Computes an AWS4 signature for a request, ready for inclusion as an
+            'Authorization' header.
+            </summary>
+            <param name="headers">
+            The request headers; 'Host' and 'X-Amz-Date' will be added to this set.
+            </param>
+            <param name="queryParameters">
+            Any query parameters that will be added to the endpoint. The parameters
+            should be specified in canonical format.
+            </param>
+            <param name="bodyHash">
+            Precomputed SHA256 hash of the request body content; this value should also
+            be set as the header 'X-Amz-Content-SHA256' for non-streaming uploads.
+            </param>
+            <param name="awsAccessKey">
+            The user's AWS Access Key.
+            </param>
+            <param name="awsSecretKey">
+            The user's AWS Secret Key.
+            </param>
+            <returns>
+            The computed authorization string for the request. This value needs to be set as the
+            header 'Authorization' on the subsequent HTTP request.
+            </returns></member>
+        <member name="T:Deeparteffects.Sdk.Signers.AWS4SignerForQueryParameterAuth">
+            <summary>
+            Sample AWS4 signer demonstrating how to sign requests to Amazon S3
+            using query string parameters.
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Signers.AWS4SignerForQueryParameterAuth.ComputeSignature(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Computes an AWS4 authorization for a request, suitable for embedding
+            in query parameters.
+            </summary>
+            <param name="headers">
+            The request headers; 'Host' and 'X-Amz-Date' will be added to this set.
+            </param>
+            <param name="queryParameters">
+            Any query parameters that will be added to the endpoint. The parameters
+            should be specified in canonical format.
+            </param>
+            <param name="bodyHash">
+            Precomputed SHA256 hash of the request body content; this value should also
+            be set as the header 'X-Amz-Content-SHA256' for non-streaming uploads.
+            </param>
+            <param name="awsAccessKey">
+            The user's AWS Access Key.
+            </param>
+            <param name="awsSecretKey">
+            The user's AWS Secret Key.
+            </param>
+            <returns>
+            The string expressing the Signature V4 components to add to query parameters.
+            </returns></member>
+        <member name="T:Deeparteffects.Sdk.Util.HttpHelpers">
+            <summary>
+            Various Http helper routines
+            </summary></member>
+        <member name="M:Deeparteffects.Sdk.Util.HttpHelpers.InvokeHttpRequest(System.Uri,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Makes a http request to the specified endpoint
+            </summary>
+            <param name="endpointUri"></param>
+            <param name="httpMethod"></param>
+            <param name="headers"></param>
+            <param name="requestBody"></param></member>
+        <member name="M:Deeparteffects.Sdk.Util.HttpHelpers.ConstructWebRequest(System.Uri,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Construct a HttpWebRequest onto the specified endpoint and populate
+            the headers.
+            </summary>
+            <param name="endpointUri">The endpoint to call</param>
+            <param name="httpMethod">GET, PUT etc</param>
+            <param name="headers">The set of headers to apply to the request</param>
+            <returns>Initialized HttpWebRequest instance</returns></member>
+        <member name="M:Deeparteffects.Sdk.Util.HttpHelpers.ReadResponseBody(System.Net.HttpWebResponse)">
+            <summary>
+            Reads the response data from the service call, if any
+            </summary>
+            <param name="response">
+            The response instance obtained from the previous request
+            </param>
+            <returns>The body content of the response</returns></member>
+        <member name="M:Deeparteffects.Sdk.Util.HttpHelpers.UrlEncode(System.String,System.Boolean)">
+            <summary>
+            Helper routine to url encode canonicalized header names and values for safe
+            inclusion in the presigned url.
+            </summary>
+            <param name="data">The string to encode</param>
+            <param name="isPath">Whether the string is a URL path or not</param>
+            <returns>The encoded string</returns></member>
+    </members>
+</doc>

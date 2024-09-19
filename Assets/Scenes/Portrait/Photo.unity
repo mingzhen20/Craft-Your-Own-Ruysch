@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 256496497}
   - component: {fileID: 256496496}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CapturePhoto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayImage: {fileID: 129928441}
   resultImageDisplay: {fileID: 686644011}
+  styleId: c7984d3c-1560-11e7-afe2-06d95fe194ed
 --- !u!4 &256496497
 Transform:
   m_ObjectHideFlags: 0
