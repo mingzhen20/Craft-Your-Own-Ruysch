@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Text;
-using SimpleJSON;
 
 public class CameraCapture : MonoBehaviour
 {
@@ -15,10 +14,44 @@ public class CameraCapture : MonoBehaviour
     private bool hasCaptured = false;
     private string apiKey = "R55LYUGpVsaLPIXUwcrhJ4wrG2ZX5KdE46jzs3m4";
 
+    public Button getStylesButton;
 
     void Start()
     {
         StartCamera();
+
+        getStylesButton.onClick.AddListener(OnGetStylesButtonClicked);
+    }
+
+    // 点击按钮时调用的函数
+    void OnGetStylesButtonClicked()
+    {
+        StartCoroutine(GetStyles()); // 开始获取样式
+    }
+
+    // 获取风格样式的函数
+    IEnumerator GetStyles()
+    {
+        string url = "https://api.deeparteffects.com/v1/noauth/styles";
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        request.SetRequestHeader("x-api-key", apiKey);
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Styles fetched: " + request.downloadHandler.text);
+            // 解析并展示风格
+            StyleResponse styleResponse = JsonUtility.FromJson<StyleResponse>(request.downloadHandler.text);
+            foreach (var style in styleResponse.styles)
+            {
+                Debug.Log("Style ID: " + style.id + ", Title: " + style.title);
+            }
+        }
+        else
+        {
+            Debug.LogError("获取风格列表失败: " + request.error);
+        }
     }
 
     void StartCamera()
@@ -56,7 +89,6 @@ public class CameraCapture : MonoBehaviour
             StartCamera();
         }
     }
-
 
     public void ApplyArtStyle()
     {
@@ -101,7 +133,7 @@ public class CameraCapture : MonoBehaviour
         if (request.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("图像上传成功");
-            var response = JsonUtility.FromJson<DeepArtResponse>(request.downloadHandler.text);
+            DeepArtResponse response = JsonUtility.FromJson<DeepArtResponse>(request.downloadHandler.text);
             StartCoroutine(GetResult(response.submissionId));
         }
         else
@@ -112,36 +144,49 @@ public class CameraCapture : MonoBehaviour
     }
 
     IEnumerator GetResult(string submissionId)
-    {
-        string url = $"https://api.deeparteffects.com/v1/noauth/result?submissionId={submissionId}";
-        UnityWebRequest request = UnityWebRequest.Get(url);
+{
+    string url = $"https://api.deeparteffects.com/v1/noauth/result?submissionId={submissionId}";
 
-        Debug.Log("Getting result with Submission ID: " + submissionId);
+    // 循环等待，直到状态为 finished
+    while (true)
+    {
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        request.SetRequestHeader("x-api-key", apiKey);
 
         yield return request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("Response: " + request.downloadHandler.text);
-            var response = JsonUtility.FromJson<DeepArtResult>(request.downloadHandler.text);
+            DeepArtResult response = JsonUtility.FromJson<DeepArtResult>(request.downloadHandler.text);
+
             if (response.status == "finished")
             {
-                Debug.Log("Artwork is ready: " + response.url);
-                StartCoroutine(DownloadImage(response.url));
+                string imageUrl = response.url;
+                Debug.Log("Artwork is ready: " + imageUrl);
+                StartCoroutine(DownloadImage(imageUrl));
+                break; // 退出循环
+            }
+            else if (response.status == "error")
+            {
+                Debug.LogError("Artwork processing error.");
+                break; // 处理失败，退出循环
             }
             else
             {
                 Debug.Log("Artwork processing status: " + response.status);
+                yield return new WaitForSeconds(5); // 等待5秒后重试
             }
         }
         else
         {
             Debug.LogError("Failed to get result: " + request.error);
             Debug.LogError("Response: " + request.downloadHandler.text);
-            Debug.LogError("获取结果失败: " + request.error + " - " + request.downloadHandler.text);
-
+            yield break; // 出现错误时退出
         }
     }
+}
+
 
 
     // 下载并显示风格化后的图像
@@ -175,4 +220,18 @@ public class DeepArtResult
 {
     public string status;
     public string url;
+}
+
+// 风格列表响应类
+[System.Serializable]
+public class StyleResponse
+{
+    public Style[] styles;
+}
+
+[System.Serializable]
+public class Style
+{
+    public string id;
+    public string title;
 }
