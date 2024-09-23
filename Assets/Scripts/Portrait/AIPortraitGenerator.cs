@@ -25,7 +25,12 @@ public class StableDiffusionGenerator : MonoBehaviour
     private string apiUrl = "https://api.stability.ai/v2beta/stable-image/generate/sd3";  // 使用SD3模型的API
     private string apiKey = "sk-Zfws3GNX3jLVG1aNXlPQWpeCurY1yCjrQgviWLgSu0MJI1pN";  // 替换为你的实际API密钥
 
-    public Sprite placeholderSprite;  // 占位图片，拖动进Inspector面板
+    public Sprite placeholderSprite1;  // 第一张占位图片
+    public Sprite placeholderSprite2;  // 第二张占位图片
+    private GameObject selectedImage = null;  // 存储用户选中的图片对象
+
+    public string removeBgApiKey = "iZyP9GV3kcRfuTmeUwpXysV6";  // 你的remove.bg API密钥
+    public string endPageSceneName = "EndPage";  // 结束页面的场景名称
 
     void Start()
     {
@@ -125,11 +130,14 @@ public class StableDiffusionGenerator : MonoBehaviour
         rect.pivot = new Vector2(0.5f, 0.5f);
         rect.anchoredPosition = Vector2.zero;
 
+        // 随机选择占位图片
+        Sprite selectedSprite = (Random.Range(0, 2) == 0) ? placeholderSprite1 : placeholderSprite2;
+
         // 设置占位图片
         Image imageComponent = newImage.GetComponent<Image>();
         if (imageComponent != null)
         {
-            imageComponent.sprite = placeholderSprite;  // 设置占位图片
+            imageComponent.sprite = selectedSprite;  // 设置随机选中的占位图片
         }
         else
         {
@@ -155,44 +163,120 @@ public class StableDiffusionGenerator : MonoBehaviour
     }
 
 
+
     void OnImageClicked(GameObject clickedImage)
     {
-        // 遍历所有图片，重置其他图片的状态
+        // 重置所有图片状态
         foreach (GameObject image in generatedImages)
         {
             Image img = image.GetComponent<Image>();
             if (img != null)
             {
-                img.color = Color.white;  // 未选中的图片颜色恢复
+                img.color = Color.white;  // 将所有图片恢复默认颜色
             }
         }
 
-        // 将被点击的图片颜色加深
+        // 高亮显示被选中的图片
         Image clickedImgComponent = clickedImage.GetComponent<Image>();
         if (clickedImgComponent != null)
         {
-            // 保持原始颜色并加深
-            Color originalColor = clickedImgComponent.color;
-            Color darkerColor = Color.Lerp(originalColor, Color.black, 0.3f);  // 0.3f 表示加深的程度
-            clickedImgComponent.color = darkerColor;
+            clickedImgComponent.color = Color.Lerp(clickedImgComponent.color, Color.black, 0.3f);  // 加深颜色
         }
+
+        // 记录选中的图片
+        selectedImage = clickedImage;
 
         Debug.Log("选中的图片：" + clickedImage.name);
     }
 
-
     void ConfirmSelection()
     {
-        foreach (GameObject image in generatedImages)
+        if (selectedImage != null)
         {
-            Image img = image.GetComponent<Image>();
-            if (img != null && img.color == Color.green)
+            Debug.Log("最终选择的图片是：" + selectedImage.name);
+
+            // 获取被选中的图片路径
+            Image img = selectedImage.GetComponent<Image>();
+            if (img != null && img.sprite != null && img.sprite.texture != null)
             {
-                Debug.Log("最终选择的图片是：" + image.name);
-                break;
+                // string imagePath = img.sprite.texture.name;  // 获取图片路径，可能需要根据实际情况调整路径的获取方式
+                string imagePath = "Assets/Resources/Portrait/generated_image.png";
+
+
+                Debug.Log("选择的图片路径为：" + imagePath);
+
+                // 开始背景去除
+                StartCoroutine(RemoveBackgroundCoroutine(imagePath));
+            }
+            else
+            {
+                Debug.LogError("无法获取图片路径！");
             }
         }
+        else
+        {
+            Debug.Log("未选择任何图片！");
+        }
     }
+
+    IEnumerator RemoveBackgroundCoroutine(string imagePath)
+    {
+        Debug.Log("开始背景去除，路径：" + imagePath);
+
+        // // 创建API请求
+        // WWWForm form = new WWWForm();
+        // form.AddField("size", "auto");
+
+        // // 检查文件是否存在
+        // if (!System.IO.File.Exists(imagePath))
+        // {
+        //     Debug.LogError("无法找到图片文件：" + imagePath);
+        //     yield break;
+        // }
+
+        // // 读取图片文件并添加到请求
+        // byte[] imageData = System.IO.File.ReadAllBytes(imagePath);
+        // form.AddBinaryData("image_file", imageData, "image.png", "image/png");
+
+        // // 创建并发送请求
+        // UnityWebRequest www = UnityWebRequest.Post("https://api.remove.bg/v1.0/removebg", form);
+        // www.SetRequestHeader("X-Api-Key", removeBgApiKey);
+
+        // yield return www.SendWebRequest();
+
+        // if (www.result == UnityWebRequest.Result.Success)
+        // {
+        //     byte[] imageBytes = www.downloadHandler.data;
+        //     Texture2D texture = new Texture2D(2, 2);
+        //     texture.LoadImage(imageBytes);
+
+        //     // 将处理后的图片设置为 Sprite
+        //     Sprite finalImageSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        //     selectedImage.GetComponent<Image>().sprite = finalImageSprite;
+
+        //     // 保存图片数据到本地文件
+        //     string filePath = Path.Combine(Application.persistentDataPath, "processed_image.png");
+        //     File.WriteAllBytes(filePath, imageBytes);
+        //     Debug.Log("图片已保存到: " + filePath);
+
+        //     // 保存图片数据到 PlayerPrefs
+        //     PlayerPrefs.SetString("FinalImage", System.Convert.ToBase64String(imageBytes));
+
+        //     // 跳转到 EndPage 场景
+        //     UnityEngine.SceneManagement.SceneManager.LoadScene(endPageSceneName);
+        //     Debug.Log("跳转到 EndPage 场景");
+        // }
+
+        // 跳转到 EndPage 场景
+        UnityEngine.SceneManagement.SceneManager.LoadScene(endPageSceneName);
+        Debug.Log("跳转到 EndPage 场景");
+
+        // 这里添加一个yield break来结束协程
+        yield break;
+
+    }
+
+
 
     private byte[] GetMultipartFormData(string boundary, string prompt, string outputFormat, string model)
     {
