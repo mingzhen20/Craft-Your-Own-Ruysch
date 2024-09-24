@@ -15,12 +15,13 @@ public class CameraCapture : MonoBehaviour
     private string apiKey = "R55LYUGpVsaLPIXUwcrhJ4wrG2ZX5KdE46jzs3m4";
 
     public Button getStylesButton;
+    public Button confirmButton;
 
     void Start()
     {
         StartCamera();
-
         getStylesButton.onClick.AddListener(OnGetStylesButtonClicked);
+        confirmButton.onClick.AddListener(ConfirmSelection);
     }
 
     // 点击按钮时调用的函数
@@ -41,12 +42,6 @@ public class CameraCapture : MonoBehaviour
         if (request.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("Styles fetched: " + request.downloadHandler.text);
-            // 解析并展示风格
-            StyleResponse styleResponse = JsonUtility.FromJson<StyleResponse>(request.downloadHandler.text);
-            foreach (var style in styleResponse.styles)
-            {
-                Debug.Log("Style ID: " + style.id + ", Title: " + style.title);
-            }
         }
         else
         {
@@ -92,8 +87,6 @@ public class CameraCapture : MonoBehaviour
 
     public void ApplyArtStyle()
     {
-        Debug.Log("Apply Style Button Clicked");
-
         if (string.IsNullOrEmpty(styleId))
         {
             Debug.LogError("Style ID is null or empty.");
@@ -116,9 +109,7 @@ public class CameraCapture : MonoBehaviour
     {
         string url = "https://api.deeparteffects.com/v1/noauth/upload";
 
-        // 构建 JSON 请求体
         string jsonRequestBody = "{\"styleId\":\"" + styleId + "\",\"imageBase64Encoded\":\"" + base64Image + "\",\"imageSize\":\"512\"}";
-
         byte[] postData = Encoding.UTF8.GetBytes(jsonRequestBody);
         UnityWebRequest request = new UnityWebRequest(url, "POST");
         request.uploadHandler = new UploadHandlerRaw(postData);
@@ -126,70 +117,57 @@ public class CameraCapture : MonoBehaviour
         request.SetRequestHeader("Content-Type", "application/json");
         request.SetRequestHeader("x-api-key", apiKey);
 
-        Debug.Log("上传的请求体: " + jsonRequestBody);  // 输出构建的请求体
-
         yield return request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.Success)
         {
-            Debug.Log("图像上传成功");
             DeepArtResponse response = JsonUtility.FromJson<DeepArtResponse>(request.downloadHandler.text);
             StartCoroutine(GetResult(response.submissionId));
         }
         else
         {
             Debug.LogError("图像上传失败: " + request.error);
-            Debug.LogError("服务器响应: " + request.downloadHandler.text);
         }
     }
 
     IEnumerator GetResult(string submissionId)
-{
-    string url = $"https://api.deeparteffects.com/v1/noauth/result?submissionId={submissionId}";
-
-    // 循环等待，直到状态为 finished
-    while (true)
     {
-        UnityWebRequest request = UnityWebRequest.Get(url);
-        request.SetRequestHeader("x-api-key", apiKey);
+        string url = $"https://api.deeparteffects.com/v1/noauth/result?submissionId={submissionId}";
 
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.Success)
+        while (true)
         {
-            Debug.Log("Response: " + request.downloadHandler.text);
-            DeepArtResult response = JsonUtility.FromJson<DeepArtResult>(request.downloadHandler.text);
+            UnityWebRequest request = UnityWebRequest.Get(url);
+            request.SetRequestHeader("x-api-key", apiKey);
 
-            if (response.status == "finished")
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
             {
-                string imageUrl = response.url;
-                Debug.Log("Artwork is ready: " + imageUrl);
-                StartCoroutine(DownloadImage(imageUrl));
-                break; // 退出循环
-            }
-            else if (response.status == "error")
-            {
-                Debug.LogError("Artwork processing error.");
-                break; // 处理失败，退出循环
+                DeepArtResult response = JsonUtility.FromJson<DeepArtResult>(request.downloadHandler.text);
+
+                if (response.status == "finished")
+                {
+                    StartCoroutine(DownloadImage(response.url));
+                    break;
+                }
+                else if (response.status == "error")
+                {
+                    Debug.LogError("风格化处理错误。");
+                    break;
+                }
+                else
+                {
+                    yield return new WaitForSeconds(5);
+                }
             }
             else
             {
-                Debug.Log("Artwork processing status: " + response.status);
-                yield return new WaitForSeconds(5); // 等待5秒后重试
+                Debug.LogError("获取结果失败: " + request.error);
+                yield break;
             }
         }
-        else
-        {
-            Debug.LogError("Failed to get result: " + request.error);
-            Debug.LogError("Response: " + request.downloadHandler.text);
-            yield break; // 出现错误时退出
-        }
     }
-}
 
-
-
-    // 下载并显示风格化后的图像
     IEnumerator DownloadImage(string imageUrl)
     {
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(imageUrl);
@@ -199,11 +177,64 @@ public class CameraCapture : MonoBehaviour
         {
             Texture2D styledTexture = DownloadHandlerTexture.GetContent(request);
             resultImageDisplay.texture = styledTexture;
+
+            // 保存图片数据到 PlayerPrefs
+            byte[] imageBytes = styledTexture.EncodeToPNG();
+            PlayerPrefs.SetString("FinalImage", System.Convert.ToBase64String(imageBytes));
+
             Debug.Log("风格化图片下载并显示成功。");
         }
         else
         {
             Debug.LogError("下载风格化图像失败: " + request.error);
+        }
+    }
+
+    // 点击Confirm后进行背景去除
+    void ConfirmSelection()
+    {
+        if (resultImageDisplay.texture == null)
+        {
+            Debug.LogError("没有风格化图像，无法进行背景去除。");
+            return;
+        }
+
+        // 将风格化图像转为Texture2D
+        Texture2D texture = resultImageDisplay.texture as Texture2D;
+        byte[] imageBytes = texture.EncodeToPNG();
+        string base64Image = System.Convert.ToBase64String(imageBytes);
+        StartCoroutine(RemoveBackgroundCoroutine(base64Image));
+    }
+
+    IEnumerator RemoveBackgroundCoroutine(string base64Image)
+    {
+        string url = "https://api.remove.bg/v1.0/removebg";
+        WWWForm form = new WWWForm();
+        form.AddField("size", "auto");
+
+        // 从 Base64 解码成字节数组
+        byte[] imageBytes = System.Convert.FromBase64String(base64Image);
+
+        // 使用 image_file 传递图片数据，而不是 image_file_b64
+        form.AddBinaryData("image_file", imageBytes, "image.png", "image/png");
+
+        UnityWebRequest www = UnityWebRequest.Post(url, form);
+        www.SetRequestHeader("X-Api-Key", "iZyP9GV3kcRfuTmeUwpXysV6");
+
+        yield return www.SendWebRequest();
+
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            byte[] resultImageBytes = www.downloadHandler.data;
+            PlayerPrefs.SetString("FinalImage", System.Convert.ToBase64String(resultImageBytes));
+
+            // 跳转到 EndPage 场景
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EndPage");
+        }
+        else
+        {
+            Debug.LogError("背景去除失败: " + www.error);
+            Debug.LogError("服务器响应: " + www.downloadHandler.text);
         }
     }
 }
@@ -220,18 +251,4 @@ public class DeepArtResult
 {
     public string status;
     public string url;
-}
-
-// 风格列表响应类
-[System.Serializable]
-public class StyleResponse
-{
-    public Style[] styles;
-}
-
-[System.Serializable]
-public class Style
-{
-    public string id;
-    public string title;
 }
