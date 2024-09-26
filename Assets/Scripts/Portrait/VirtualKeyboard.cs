@@ -15,7 +15,6 @@ public class VirtualKeyboard : MonoBehaviour
             Debug.Log("TouchScreenKeyboard opened."); // 添加这行代码用于调试
         }
 
-
         // 如果键盘已打开
         if (keyboard != null)
         {
@@ -26,6 +25,14 @@ public class VirtualKeyboard : MonoBehaviour
             if (keyboard.status == TouchScreenKeyboard.Status.Done || keyboard.status == TouchScreenKeyboard.Status.Canceled)
             {
                 keyboard = null; // 键盘关闭
+            }
+
+            // 按下返回键或某个自定义按钮时关闭键盘
+            if (Input.GetKeyDown(KeyCode.Escape)) // 例如按下Escape键关闭键盘
+            {
+                keyboard.active = false; // 手动关闭键盘
+                keyboard = null; // 释放键盘资源
+                Debug.Log("TouchScreenKeyboard closed.");
             }
         }
     }

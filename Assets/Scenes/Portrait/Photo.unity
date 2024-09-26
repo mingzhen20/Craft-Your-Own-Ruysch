@@ -296,6 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 256496497}
   - component: {fileID: 256496496}
+  - component: {fileID: 256496498}
   m_Layer: 0
   m_Name: CapturePhoto
   m_TagString: Untagged
@@ -310,7 +311,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256496495}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4271636beb557240ae81ac6bf3108b9, type: 3}
   m_Name: 
@@ -335,6 +336,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256496498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256496495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9eceedbdd99974aac9ddd144be0036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayImage: {fileID: 129928441}
+  resultImageDisplay: {fileID: 686644011}
+  confirmButton: {fileID: 474119736}
 --- !u!1 &341560147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,8 +1057,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256496496}
-        m_TargetAssemblyTypeName: CameraCapture, Assembly-CSharp
+      - m_Target: {fileID: 256496498}
+        m_TargetAssemblyTypeName: CameraStyle, Assembly-CSharp
         m_MethodName: ApplyArtStyle
         m_Mode: 1
         m_Arguments:
@@ -1295,8 +1311,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256496496}
-        m_TargetAssemblyTypeName: CameraCapture, Assembly-CSharp
+      - m_Target: {fileID: 256496498}
+        m_TargetAssemblyTypeName: CameraStyle, Assembly-CSharp
         m_MethodName: CaptureImage
         m_Mode: 1
         m_Arguments:
