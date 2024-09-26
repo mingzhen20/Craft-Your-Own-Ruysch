@@ -6,6 +6,10 @@ public class EndPageController : MonoBehaviour, IBeginDragHandler, IDragHandler,
 {
     public Image imageDisplay;  // 显示图片的UI Image
     private RectTransform imageRectTransform;
+    private float initialDistance;
+    private Vector3 initialScale;
+    private float minZoom = 0.5f;  // 最小缩放比例
+    private float maxZoom = 2.0f;  // 最大缩放比例
 
     void Start()
     {
@@ -34,10 +38,15 @@ public class EndPageController : MonoBehaviour, IBeginDragHandler, IDragHandler,
             imageDisplay.raycastTarget = true;
         }
 
-        // 动态添加EventTrigger并关联拖拽事件
+        // 动态添加拖拽事件
         AddEventTrigger(imageDisplay.gameObject, EventTriggerType.BeginDrag, OnBeginDrag);
         AddEventTrigger(imageDisplay.gameObject, EventTriggerType.Drag, OnDrag);
         AddEventTrigger(imageDisplay.gameObject, EventTriggerType.EndDrag, OnEndDrag);
+    }
+
+    void Update()
+    {
+        HandlePinchZoom(); // 处理缩放手势
     }
 
     private void AddEventTrigger(GameObject target, EventTriggerType eventType, System.Action<PointerEventData> action)
@@ -70,5 +79,38 @@ public class EndPageController : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("结束拖拽");
+    }
+
+    // 处理双指缩放手势
+    private void HandlePinchZoom()
+    {
+        if (Input.touchCount == 2)  // 如果有两个触点
+        {
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            // 计算两指间的当前距离
+            float currentDistance = Vector2.Distance(touchZero.position, touchOne.position);
+
+            // 检查是否是新的缩放手势
+            if (touchZero.phase == TouchPhase.Began || touchOne.phase == TouchPhase.Began)
+            {
+                initialDistance = currentDistance;
+                initialScale = imageRectTransform.localScale;  // 记录初始的缩放比例
+            }
+            else
+            {
+                // 计算缩放比例
+                if (Mathf.Approximately(initialDistance, 0)) return;  // 避免除以零
+                float scaleFactor = currentDistance / initialDistance;
+
+                // 根据缩放比例调整图片的大小
+                Vector3 newScale = initialScale * scaleFactor;
+                newScale.x = Mathf.Clamp(newScale.x, minZoom, maxZoom);  // 限制缩放比例
+                newScale.y = Mathf.Clamp(newScale.y, minZoom, maxZoom);
+
+                imageRectTransform.localScale = newScale;  // 应用缩放
+            }
+        }
     }
 }
