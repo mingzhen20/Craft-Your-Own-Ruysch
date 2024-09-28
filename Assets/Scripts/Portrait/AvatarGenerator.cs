@@ -2,40 +2,74 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using System;
 
 public class AvatarGenerator : MonoBehaviour
 {
-    public Image avatarImage;  // 用于显示avatar的UI Image组件
-    private string baseUrl = "https://api.dicebear.com/9.x/micah/png";  // DiceBear API的基础URL
-    private string currentSeed = "userSeed";  // avatar的种子
+    public Image avatarImage;  // 显示avatar的UI Image组件
+    public int avatarSize;  // 头像的大小
+    private string baseUrl = "https://api.dicebear.com/9.x/open-peeps/png";  // Open Peeps API的基础URL
+    private string currentSeed = "userSeed";  // 用户选择的头像种子
 
-    // 默认参数
-    private string hair = "short01";
-    private string eyes = "round";
+    public Button confirmButton;
 
-    // 点击不同UI元素时调用此方法来更新特定的发型
-    public void UpdateHair(string hairStyle)
+    // 默认值（可以根据用户选择进行更新）
+    public string skinColor;  // 表情
+    public string head;  // 头部样式
+    public string face;  // 脸部样式
+    public int maskProbability;  // 戴口罩的概率
+    public int facialHairProbability;  // 有胡须的概率
+
+    
+
+    void Start()
     {
-        hair = hairStyle;  // 接收传递的发型参数
-        GenerateAvatar();  // 更新avatar
+        // 在游戏开始时加载默认头像
+        GenerateAvatar();
+        confirmButton.onClick.AddListener(OnConfirmButtonClick);
     }
 
-    // 点击不同UI元素时调用此方法来更新特定的眼睛样式
-    public void UpdateEyes(string eyesStyle)
+    // 更新表情
+    public void UpdateSkinColor(string newSkinColor)
     {
-        eyes = eyesStyle;  // 接收传递的眼睛参数
-        GenerateAvatar();  // 更新avatar
+        skinColor = newSkinColor;
+        GenerateAvatar();  // 每次更新都重新生成头像
     }
 
-    // 生成avatar并更新显示
+    public void UpdateHead(string newHead)
+    {
+        head = newHead;
+        GenerateAvatar();
+    }
+
+    public void UpdateFace(string newFace)
+    {
+        face = newFace;
+        GenerateAvatar();
+    }
+
+    public void UpdateMaskProbability(float newMaskProbability)
+    {
+        maskProbability = (int)newMaskProbability;
+        GenerateAvatar();
+    }
+
+    public void UpdateFacialHairProbability(float newFacialHairProbability)
+    {
+        facialHairProbability = (int)newFacialHairProbability;
+        GenerateAvatar();
+    }
+
+    // 生成头像的主方法
     private void GenerateAvatar()
     {
-        // 构建包含发型和眼睛参数的API请求URL
-        string url = $"{baseUrl}?seed={currentSeed}&hair={hair}&eyes={eyes}";
-        StartCoroutine(LoadAvatar(url));
+        // 构建包含用户选择的API URL，添加配饰和表情等参数
+        string url = $"{baseUrl}?seed={currentSeed}&flip=true&skinColor={skinColor}&face={face}&size={avatarSize}&maskProbability={maskProbability}&head={head}&facialHairProbability={facialHairProbability}";
+        StartCoroutine(LoadAvatar(url));  // 使用协程从API加载头像
     }
 
-    // 使用协程从API加载avatar并将其显示在UI中
+    // 从API加载头像的协程
     IEnumerator LoadAvatar(string url)
     {
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
@@ -49,6 +83,24 @@ public class AvatarGenerator : MonoBehaviour
         {
             Texture2D texture = DownloadHandlerTexture.GetContent(www);
             avatarImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+
+            // Save the texture data to PlayerPrefs
+            SaveImageForEndPage(texture);
         }
+    }
+
+    // 保存图片数据
+    void SaveImageForEndPage(Texture2D texture)
+    {
+        byte[] imageBytes = texture.EncodeToPNG(); // Encode the texture into PNG
+        string encodedImage = Convert.ToBase64String(imageBytes);
+        PlayerPrefs.SetString("FinalImage", encodedImage);
+        PlayerPrefs.Save();
+    }
+
+
+    public void OnConfirmButtonClick()
+    {
+        SceneManager.LoadScene("EndPage"); // 确保场景名称是正确的
     }
 }
