@@ -17414,6 +17414,7 @@ MonoBehaviour:
   facialHair: chin
   accessories: 
   accessoriesProbability: 0
+  clothingColor: 2f3541
 --- !u!4 &2009641738
 Transform:
   m_ObjectHideFlags: 0
