@@ -20,8 +20,11 @@ public class AvatarGenerator : MonoBehaviour
     public string face;  // 脸部样式
     public int maskProbability;  // 戴口罩的概率
     public int facialHairProbability;  // 有胡须的概率
+    public string facialHair;  // 胡须样式
+    public string accessories;  // 配饰
+    public int accessoriesProbability;  // 有配饰的概率
 
-    
+
 
     void Start()
     {
@@ -61,11 +64,31 @@ public class AvatarGenerator : MonoBehaviour
         GenerateAvatar();
     }
 
+    public void UpdateFacialHair(string newFacialHair)
+    {
+        facialHairProbability = 100;
+        facialHair = newFacialHair;
+        GenerateAvatar();
+    }
+
+    public void UpdateAccessories(string newAccessories)
+    {
+        accessoriesProbability = 100;
+        accessories = newAccessories;
+        GenerateAvatar();
+    }
+
+    public void UpdateAccessoriesProbability(float newAccessoriesProbability)
+    {
+        accessoriesProbability = (int)newAccessoriesProbability;
+        GenerateAvatar();
+    }
+
     // 生成头像的主方法
     private void GenerateAvatar()
     {
         // 构建包含用户选择的API URL，添加配饰和表情等参数
-        string url = $"{baseUrl}?seed={currentSeed}&flip=true&skinColor={skinColor}&face={face}&size={avatarSize}&maskProbability={maskProbability}&head={head}&facialHairProbability={facialHairProbability}";
+        string url = $"{baseUrl}?seed={currentSeed}&flip=true&skinColor={skinColor}&face={face}&size={avatarSize}&maskProbability={maskProbability}&head={head}&facialHairProbability={facialHairProbability}&accessoriesProbability={accessoriesProbability}&facialHair={facialHair}&accessories={accessories}";
         StartCoroutine(LoadAvatar(url));  // 使用协程从API加载头像
     }
 
