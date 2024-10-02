@@ -1,0 +1,10 @@
+stages:
+  - mirror
+
+sync_to_github:
+  stage: mirror
+  script:
+    - git remote add github https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}
+    - git push --mirror github
+  only:
+    - first_version
