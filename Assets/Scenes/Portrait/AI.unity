@@ -995,6 +995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097467727}
   - component: {fileID: 1097467726}
+  - component: {fileID: 1097467728}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1020,7 +1021,10 @@ MonoBehaviour:
   confirmButton: {fileID: 1927828353}
   imagePrefab: {fileID: 396787482532384435, guid: 1f720c71e69117d49953520cfb762bdd, type: 3}
   loadingIcon: {fileID: 1130656955}
-  placeholderSprite: {fileID: 21300000, guid: c2dd7b9bbae106f4abaa8143cb26211e, type: 3}
+  placeholderSprite1: {fileID: 21300000, guid: c2dd7b9bbae106f4abaa8143cb26211e, type: 3}
+  placeholderSprite2: {fileID: 21300000, guid: f6e6dbe188b698743afdd1900be64b1e, type: 3}
+  removeBgApiKey: iZyP9GV3kcRfuTmeUwpXysV6
+  endPageSceneName: EndPage
 --- !u!4 &1097467727
 Transform:
   m_ObjectHideFlags: 0
@@ -1036,6 +1040,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1097467728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097467725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e071b7a7502c0429d890ccea128709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 2077737899}
 --- !u!1 &1130656955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 924988092354231347, guid: 22c9c474178023744bc08dfb4e02931b, type: 3}
